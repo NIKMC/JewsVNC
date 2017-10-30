@@ -3,19 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace JuceVNC
+namespace JewsVNC
 {
     class Computer
     {
-        public string ID { get; set; }
-        public string Password { get; set; }
-        public string Name { get; set; }
-        public string IP { get; set; }
-        public Computer(string ID, string password, string name, string ip){
-            this.ID = ID;
-            this.Password = password;
-            this.Name = name;
-            this.IP = ip;
+        public string id { get; set; }
+        public string password { get; set; }
+        public string name { get; set; }
+        public string ip { get; set; }
+        public string guid { get; set; }
+        public string status { get; set; }
+        public string owner { get; set; }
+        public string hash { get; set; }
+        public string mac { get; set; }
+
+        public Computer(string ID, string password, string name, string ip,string status, string guid, string owner, string hash,string mac)
+        {
+            this.id = ID;
+            this.password = password;
+            this.name = name;
+            this.ip = ip;
+            this.status = status;
+            this.guid = guid;
+            this.owner = owner;
+            this.hash = hash;
+            this.mac = mac;
         }
         public Computer()
         {        }
